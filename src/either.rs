@@ -8,7 +8,7 @@ pub enum KeyOrPointer {
     /// Key bind
     Key(Key),
     /// Pointer bind
-    Pointer(PointerButton),
+    Pointer(egui::PointerButton),
 }
 
 impl BindTarget for KeyOrPointer {
