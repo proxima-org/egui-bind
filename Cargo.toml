@@ -1,0 +1,24 @@
+[package]
+name = "egui-bind"
+version = "0.11.0"
+edition = "2021"
+description = "Library for showing keybinds"
+license = "MIT"
+authors = ["ItsEthra"]
+repository = "https://github.com/ItsEthra/egui-bind"
+
+[features]
+serde = ["dep:serde", "egui/serde"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"], optional = true }
+egui = { version = "0.25.0", default-features = false }
+windows = { version = "0.52.0", features = [
+    "Win32_Foundation",
+    "Win32_UI_TextServices",
+] }
+lazy_static = "1.4.0"
+
+
+[dev-dependencies]
+eframe = "0.26.0"
